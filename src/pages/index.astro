@@ -1,0 +1,61 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<Layout
+	title="Lina Aparicio Portfolio"
+	description="Portafolio de Lina Aparicio: Desarrolladora Web junior y Project Manager"
+>
+	<main>
+		<!-- Top -->
+		<SectionContainer id="top" class="py-96 pt-80">
+			<h1 class="main-title text-6xl flex justify-center flex-row pb-6">
+				Lina Aparicio Alvarez
+				<!-- <div class="flex justify-center items-center">
+					<Badge>Disponible para contratar</Badge>
+				</div> -->
+			</h1>
+			<h2 class="description text-xl flex justify-center pb-4">
+				Desarrolladora Web | Project Manager | Ingeniera de Diseño de
+				Producto
+			</h2>
+			<ul
+				class="social-container flex justify-center items-center gap-x-7"
+			>
+				<li class="hover:scale-110 transition">
+					<a
+						href="https://www.linkedin.com/in/linaaparicio-developer-frontend-fullstack/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<LinkedinIcon class="size-8" />
+					</a>
+				</li>
+				<li class="hover:scale-110 transition">
+					<a
+						href="https://github.com/suaviaparicio"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<GitHubIcon class="size-8" />
+					</a>
+				</li>
+			</ul>
+		</SectionContainer>
+
+		<!-- Experiencia -->
+		<SectionContainer id="experiencia" class="">
+			<h2 class="title text-4xl font-semibold mb-10">Experiencia</h2>
+			<div class="flex justify-center gap-x-10">
+				<Experience/>
+			</div>
+			<!-- PENDIENTE CÓMO DESCARGAR EL CV -->
+			<button class="button" role="button">Descargar CV</button>
+		</SectionContainer>
+	</main>
+</Layout>

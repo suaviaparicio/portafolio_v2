@@ -1,0 +1,34 @@
+---
+import ExperienceItem  from "./ExperienceItem.astro";
+import WebIcon from "./icons/experience/Web.astro";
+import ProjectIcon from "./icons/experience/Project.astro";
+import EngineernIcon from "./icons/experience/Engineer.astro";
+
+const EXPERIENCE = [
+    {
+        title: "Desarrolladora Web",
+        description: "Más de 1 año de experiencia en el desarrollo de aplicaciones web, gracias a una reciente transición profesional.",
+        icon: WebIcon,
+    },
+    {
+        title: "Project Manager",
+        description: "Experiencia de más de 5 años liderando proyectos de expansión regional e innovación educativa durante más de 5 años.",
+        icon: ProjectIcon,
+    },
+    {
+        title: "Ingeniera de Diseño de Producto",
+        description: "Título obtenido en la universidad Eafit en el año 2015, con énfasis en Gerencia de proyectos. Lorem ipsum dolor sit amet.",
+        icon: EngineernIcon,
+    },
+]
+---
+
+    {
+        EXPERIENCE.map(experience => (
+            <article class="experience-card p-10 border-l-2 border-t-2 border-r-2 border-b-[11px] border-[#575757] transition-all duration-400 ease-in-out hover:scale-105 hover:border-b-[#A9D6E0]">
+                <experience.icon />
+                <ExperienceItem {...experience} />
+            </article>
+        ))
+    }
+

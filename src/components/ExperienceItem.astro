@@ -1,0 +1,14 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    icon: (props: Record<string, any>) => any;
+}
+    const { title, description, icon } = Astro.props;
+
+---
+
+    <icon />
+    <h3 class="subtitle">{title}</h3>
+    <!-- <br /> -->
+    <p>{description}</p>
