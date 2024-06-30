@@ -11,16 +11,16 @@ import Experience from "../components/Experience.astro";
 	title="Lina Aparicio Portfolio"
 	description="Portafolio de Lina Aparicio: Desarrolladora Web junior y Project Manager"
 >
-	<main>
+	<main class="px-5">
 		<!-- Top -->
-		<SectionContainer id="top" class="py-96 pt-80">
-			<h1 class="main-title text-6xl flex justify-center flex-row pb-6">
+		<SectionContainer id="top" class="py-96 pt-80 ">
+			<h1 class="main-title text-5xl md:text-4xl lg:text-6xl flex justify-center flex-row pb-6">
 				Lina Aparicio Alvarez
 				<!-- <div class="flex justify-center items-center">
 					<Badge>Disponible para contratar</Badge>
 				</div> -->
 			</h1>
-			<h2 class="description text-xl flex justify-center pb-4">
+			<h2 class="description text-xl flex justify-center pb-4 ">
 				Desarrolladora Web | Project Manager | Ingeniera de Diseño de
 				Producto
 			</h2>
@@ -52,10 +52,22 @@ import Experience from "../components/Experience.astro";
 		<SectionContainer id="experiencia" class="">
 			<h2 class="title text-4xl font-semibold mb-10">Experiencia</h2>
 			<div class="flex justify-center gap-x-10">
-				<Experience/>
+				<Experience />
 			</div>
 			<!-- PENDIENTE CÓMO DESCARGAR EL CV -->
-			<button class="button" role="button">Descargar CV</button>
+			<button
+				class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-md font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-[#a9d6e0] group-hover:from-cyan-500 group-hover:to-[#a9d6e0] hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-[#a9d6e0] dark:focus:ring-cyan-800"
+			>
+				<span
+					class="relative px-5 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+				>
+					Descargar CV
+				</span>
+			</button>
+
+			<button class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none  duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
+				Descargar CV
+			</button>
 		</SectionContainer>
 	</main>
 </Layout>
