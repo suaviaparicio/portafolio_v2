@@ -1,52 +1,74 @@
 ---
 import htmlIcon from './icons/projects/Html.astro';
+import cssIcon from './icons/projects/Css.astro';
+import jsIcon from './icons/projects/JavaScript.astro';
+import tailwindIcon from './icons/projects/Tailwind.astro';
+import reactIcon from './icons/projects/React.astro';
+import dockerIcon from './icons/projects/Docker.astro';
+import awsIcon from './icons/projects/Aws.astro';
+import astroIcon from './icons/projects/Astro.astro';
+import nextIcon from './icons/projects/Next.astro';
+import expressIcon from './icons/projects/Express.astro';
+import nodeIcon from './icons/projects/Node.astro';
 
 const TAGS = {
     HTML: {
         name: 'HTML',
-        class: 'bg-[#575757] text-white',
+        // class: 'bg-[#575757] text-white',
+        class: 'bg-black text-white',
         icon: htmlIcon,
     },
-    // CSS: {
-    //     name: 'CSS',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png',
-    // },
-    // JavaScript: {
-    //     name: 'JavaScript',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png',
-    // },
-    // Tailwind: {
-    //     name: 'Tailwind',
-    //     class: 'bg-[#38BDF8] text-black',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png',
-    // },
-    // React: {
-    //     name: 'React',
-    //     class: 'bg-[#61DBFB] text-black',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
-    // },
-    // Docker: {
-    //     name: 'Docker',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Docker_logo.svg/1200px-Docker_logo.svg.png',
-    // },
-    // AWS: {
-    //     name: 'AWS',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2048px-Amazon_Web_Services_Logo.svg.png',
-    // },
-    // Astro: {
-    //     name: 'Astro',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Astro_Logo.svg/2048px-Astro_Logo.svg.png',
-    // },
-    // Next: {
-    //     name: 'Next.js',
-    //     class: 'bg-black text-white',
-    //     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/2048px-Nextjs-logo.svg.png',
-    // }
+    CSS: {
+        name: 'CSS',
+        // class: 'bg-[#575757] text-white',
+        class: 'bg-black text-white',
+        icon: cssIcon,
+    },
+    JAVASCRIPT: {
+        name: 'JavaScript',
+        class: 'bg-black text-white',
+        icon: jsIcon,
+    },
+    TAILWIND: {
+        name: 'Tailwind',
+        class: 'bg-black text-white',
+        icon: tailwindIcon,
+    },
+    REACT: {
+        name: 'React',
+        class: 'bg-black text-white',
+        icon: reactIcon,
+    },
+    DOCKER: {
+        name: 'Docker',
+        class: 'bg-black text-white',
+        icon: dockerIcon,
+    },
+    AWS: {
+        name: 'AWS',
+        class: 'bg-black text-white',
+        icon: awsIcon,
+    },
+    ASTRO: {
+        name: 'Astro',
+        class: 'bg-black text-white',
+        icon: astroIcon,
+    },
+    NEXT: {
+        name: 'Next.js',
+        class: 'bg-black text-white',
+        icon: nextIcon,
+    },
+    EXPRESS: {
+        name: 'Express.js',
+        class: 'bg-black text-white',
+        icon: expressIcon,
+    },
+    NODE: {
+        name: 'Node.js',
+        class: 'bg-black text-white',
+        icon: nodeIcon,
+    },
 }
 
 const PROJECTS = [
@@ -56,8 +78,7 @@ const PROJECTS = [
         link: 'https://cincoimpro.com/',
         github: 'https://github.com/suaviaparicio/5inco_React',
         image: '/projects/proyecto_cinco.webp',
-        tags: [TAGS.HTML],
-        // tags: [TAGS.HTML, 'CSS', 'React', 'Docker', 'Terraform', 'AWS (S3 - ParamStore - CloudFront)'],
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.DOCKER, TAGS.AWS],
     }
 ]
 ---
@@ -67,6 +88,10 @@ const PROJECTS = [
         <article>
             <h2 class="text-2xl font-semibold mb-2">{title}</h2>
             <p class="text-xl mb-4 text-pretty">{description}</p>
+            <img 
+                class="rounded mb-2" 
+                src={image} 
+                alt="Proyecto Cinco Impro">
             <ul class=" flex gap-x-2 flex-row mb-2">
                 {tags.map((tag) => (
                     <li>
@@ -77,10 +102,6 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
-            <img 
-                class="rounded " 
-                src={image} 
-                alt="Proyecto Cinco Impro">
         </article>
     ))
 }
