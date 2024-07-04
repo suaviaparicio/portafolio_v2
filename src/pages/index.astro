@@ -5,6 +5,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import LinkedinIcon from "../components/icons/Linkedin.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -13,14 +14,16 @@ import Experience from "../components/Experience.astro";
 >
 	<main class="px-5">
 		<!-- Top -->
-		<SectionContainer id="top" class="py-96 pt-80 ">
-			<h1 class="main-title text-5xl md:text-4xl lg:text-6xl flex justify-center flex-row pb-6">
+		<SectionContainer id="top" class="py-96 pt-80">
+			<h1
+				class="main-title text-5xl md:text-4xl lg:text-6xl flex justify-center flex-row pb-6"
+			>
 				Lina Aparicio Alvarez
 				<!-- <div class="flex justify-center items-center">
 					<Badge>Disponible para contratar</Badge>
 				</div> -->
 			</h1>
-			<h2 class="description text-xl flex justify-center pb-4 ">
+			<h2 class="description text-xl flex justify-center pb-4">
 				Desarrolladora Web | Project Manager | Ingeniera de Diseño de
 				Producto
 			</h2>
@@ -65,7 +68,22 @@ import Experience from "../components/Experience.astro";
 				</span>
 			</button>
 
-			<button class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none  duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
+			<button
+				class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]"
+			>
+				Descargar CV
+			</button>
+		</SectionContainer>
+
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos" class="pt-80">
+			<h2 class="title text-4xl font-semibold mb-10">Proyectos</h2>
+			<div class="flex justify-center gap-x-10">
+				<Projects />
+			</div>
+			<button
+				class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]"
+			>
 				Descargar CV
 			</button>
 		</SectionContainer>
