@@ -22,114 +22,103 @@ import DockerIcon from "./icons/technologies/Docker.astro";
 
 <div class="relative overflow-x-auto">
     <table class="w-full text-md text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <!-- <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    Product name
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Color
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Category
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Price
-                </th>
-            </tr>
-        </thead> -->
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white">
+            <tr class="bg-gray-50 dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white" rowspan="2">
                     Frontend
                 </th>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-sm ">
                     <HtmlIcon class="size-7 mb-1"/>
-                    HTML
+                    <span>HTML</span>
+
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-sm">
                     <CssIcon class="size-7 mb-1"/>
                     CSS
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-6 py-4 text-sm">
                     <JsIcon class="size-7 mb-1"/>
-                    Javascript
+                    <span>Js</span>
+                    
                 </td>
-                <td class="px-6 py-4 flex-col">
+                <td class="px-6 py-4 text-sm">
                     <ReactIcon class="size-7 mb-1"/>
                     React
                 </td>
-                <td class="px-6 py-4 flex-col">
-                    <BootstrapIcon class="size-7 mb-1"/>
-                    Bootstrap
-                </td>
-                <td class="px-6 py-4 flex-col">
+                <td class="px-6 py-4 text-sm">
                     <FigmaIcon class="size-7 mb-1"/>
                     Figma
                 </td>
-                <td class="px-6 py-4 flex-col">
+            </tr>
+            <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 text-sm">
+                    <BootstrapIcon class="size-7 mb-1"/>
+                    Bootstrap
+                </td>
+                <td class="px-6 py-4 text-sm">
                     <NextIcon class="size-7 mb-1"/>
                     Next.Js
                 </td>
-                <td class="px-6 py-4 flex-col">
+                <td class="px-6 py-4 text-sm">
                     <AstroIcon class="size-7 mb-1"/>
                     Astro
                 </td>
-                <td class="px-6 py-4 flex-col">
+                <td class="px-6 py-4 text-sm">
                     <TailwindIcon class="size-7 mb-1"/>
                     Tailwind
                 </td>
-                
+                <td class="px-6 py-4 text-sm">
+                </td>
             </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white">
-                    Backend
-                </th>
-                <td class="px-6 py-4">
-                    <NodeIcon class="size-7 mb-1"/>
-                    nodeJs
-                </td>
-                <td class="px-6 py-4">
-                    <ExpressIcon class="size-7 mb-1"/>
-                    Express
-                </td>
-                <td class="px-6 py-4">
-                    <MysqlIcon class="size-7 mb-1"/>
-                    MySQL
-                </td>
-                <td class="px-6 py-4">
-                    <MongoIcon class="size-7 mb-1"/>
-                    MongoDB
-                </td>
+        <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+            <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white">
+                Backend
+            </th>
+            <td class="px-6 py-4 text-sm">
+                <NodeIcon class="size-7 mb-1"/>
+                nodeJs
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <ExpressIcon class="size-7 mb-1"/>
+                Express
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <MysqlIcon class="size-7 mb-1"/>
+                MySQL
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <MongoIcon class="size-7 mb-1"/>
+                MongoDB
+            </td>
+            <td class="px-6 py-4 text-sm">
                 
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white">
-                    Herramientas
-                </th>
-                <td class="px-6 py-4">
-                    <VsCodeIcon class="size-7 mb-1"/>
-                    VsCode
-                </td>
-                <td class="px-6 py-4">
-                    <TerminalIcon class="size-7 mb-1"/>
-                    Terminal
-                </td>
-                <td class="px-6 py-4">
-                    <GitHubIcon class="size-7 mb-1"/>
-                    Github
-                </td>
-                <td class="px-6 py-4">
-                    <AwsIcon class="size-7 mb-1"/>
-                    AWS
-                </td>
-                <td class="px-6 py-4">
-                    <DockerIcon class="size-7 mb-1"/>
-                    Docker
-                </td>
-                
-                
-            </tr>
+            </td>
+        </tr>
+        <tr class="bg-gray-50 dark:bg-gray-800">
+            <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white">
+                Herramientas
+            </th>
+            <td class="px-6 py-4 text-sm">
+                <VsCodeIcon class="size-7 mb-1"/>
+                VsCode
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <TerminalIcon class="size-7 mb-1"/>
+                Terminal
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <GitHubIcon class="size-7 mb-1"/>
+                Github
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <AwsIcon class="size-7 mb-1"/>
+                AWS
+            </td>
+            <td class="px-6 py-4 text-sm">
+                <DockerIcon class="size-7 mb-1"/>
+                Docker
+            </td>
+        </tr>
         </tbody>
     </table>
 </div>
