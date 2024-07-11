@@ -1,58 +1,98 @@
 ---
-// import "../scripts/clipboard"
+import ClipboardComponent from "./ClipboardComponent.jsx";
 ---
 
-
-<!-- <div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5">
-    <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Copiar Correo</h2>
-    <address class="relative bg-gray-50 dark:bg-gray-700 dark:border-gray-600 p-4 rounded-lg border border-gray-200 not-italic grid grid-cols-2">
-        <div id="contact-details" class="space-y-2 text-gray-900 dark:text-white font-medium leading-loose">
-            laparici9@gmail.com
+<div class="w-full max-w-[16rem]">
+    <div class="relative text-center">
+        <div id="contact-details" class="space-y-2 text-gray-900 text-3xl dark:text-white font-medium leading-loose mb-3">
+        laparici9@gmail.com
         </div>
-        <button data-copy-to-clipboard-target="contact-details" data-copy-to-clipboard-content-type="textContent" data-tooltip-target="tooltip-contact-details" class="absolute end-2 top-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
-            <span id="default-icon-contact-details">
-                <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+        <button id="copy-button" data-copy-to-clipboard-target="copy-email" class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
+            <span id="default-icon-contact-details" class="inline-flex items-center">
+                <svg class="size-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                     <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
                 </svg>
+                <span class="text-md ">Copiar</span>
             </span>
             <span id="success-icon-contact-details" class="hidden inline-flex items-center">
-                <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                <svg class="size-4 text-gray-600 dark:text-gray-600 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                 </svg>
+                <span class="text-md  text-gray-600 dark:text-white">Copied</span>   
             </span>
         </button>
-        <div id="tooltip-contact-details" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            <span id="default-tooltip-message-contact-details">Copiar corre</span>
-            <span id="success-tooltip-message-contact-details" class="hidden">Copied!</span>
-            <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-    </address>
-</div> -->
-
-
-<div class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5">
-    <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Copiar Correo</h2>
-    <address class="relative bg-gray-50 dark:bg-gray-700 dark:border-gray-600 p-4 rounded-lg border border-gray-200 not-italic grid grid-cols-2">
-        <div id="contact-details" class="space-y-2 text-gray-900 dark:text-white font-medium leading-loose">
-            laparici9@gmail.com
-        </div>
-        <button id="copy-button" class="absolute end-2 top-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center">
-            <span id="default-icon-contact-details">
-                <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                    <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/>
-                </svg>
-            </span>
-            <span id="success-icon-contact-details" class="hidden inline-flex items-center">
-                <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                </svg>
-            </span>
-        </button>
-        <div id="tooltip-contact-details" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            <span id="default-tooltip-message-contact-details">Copiar correo</span>
-            <span id="success-tooltip-message-contact-details" class="hidden">Copied!</span>
-            <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-    </address>
+    </div>
+    <ClipboardComponent client:load />
 </div>
 
+<!-- <div>
+    <div
+        class="w-full max-w-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow rounded-lg p-5"
+    >
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Copiar Correo
+        </h2>
+        <address
+            class="relative bg-gray-50 dark:bg-gray-700 dark:border-gray-600 p-4 rounded-lg border border-gray-200 not-italic grid grid-cols-2"
+        >
+            <div
+                id="contact-details"
+                class="space-y-2 text-gray-900 dark:text-white font-medium leading-loose"
+            >
+                laparici9@gmail.com
+            </div>
+            <button
+                id="copy-button"
+                class="absolute end-2 top-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2 inline-flex items-center justify-center"
+            >
+                <span id="default-icon-contact-details">
+                    <svg
+                        class="w-3.5 h-3.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 18 20"
+                    >
+                        <path
+                            d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"
+                        ></path>
+                    </svg>
+                </span>
+                <span
+                    id="success-icon-contact-details"
+                    class="hidden inline-flex items-center"
+                >
+                    <svg
+                        class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 16 12"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 5.917 5.724 10.5 15 1.5"></path>
+                    </svg>
+                </span>
+            </button>
+            <div
+                id="tooltip-contact-details"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            >
+                <span id="default-tooltip-message-contact-details"
+                    >Copiar correo</span
+                >
+                <span
+                    id="success-tooltip-message-contact-details"
+                    class="hidden">Copied!</span
+                >
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </address>
+    </div>
+    <ClipboardComponent client:load />
+</div> -->
