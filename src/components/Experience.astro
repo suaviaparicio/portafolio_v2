@@ -22,15 +22,16 @@ const EXPERIENCE = [
     },
 ]
 ---
-
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     {
         EXPERIENCE.map(experience => (
-            <article class="experience-card group m-h-64 w-full p-6 mb-10 border-l-2 border-t-2 border-r-2 border-b-[11px] border-[#575757] transition-all duration-400 ease-in-out hover:scale-105 hover:border-b-[#A9D6E0] ">
+            <article class="experience-card group m-h-64 w-full p-6 mb-10 border-l-2 border-t-2 border-r-2 border-b-[11px] border-[#575757] transition-all duration-400 ease-in-out hover:scale-105 hover:border-b-[#A9D6E0] grid-cols-1 md:grid-cols-2">
                 <experience.icon class="group-hover:text-[#A9D6E0]" />
                 <ExperienceItem {...experience} />
             </article>
         ))
     }
+</div>
 
 <!-- Responsive:
 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -->
