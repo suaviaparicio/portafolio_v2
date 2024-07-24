@@ -11,7 +11,6 @@ const ClipboardComponent = () => {
             defaultIcon.classList.add('hidden');
             successIcon.classList.remove('hidden');
 
-            // reset to default state
             setTimeout(() => {
                 defaultIcon.classList.remove('hidden');
                 successIcon.classList.add('hidden');
