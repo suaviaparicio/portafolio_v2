@@ -95,7 +95,7 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-16 ">
     {
         PROJECTS.map(({ title, description, link, github, image, tags }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -135,11 +135,11 @@ const PROJECTS = [
                             </span>
                         </button>
                     </a>
-                    <ul class=" flex gap-x-2 flex-row mt-6">
+                    <ul class=" flex gap-x-2 flex-row mt-6 flex-wrap md:flex-nowrap">
                         {tags.map((tag) => (
                             <li>
                                 <span
-                                    class={`flex items-center gap-2 rounded-full text-sm py-1 px-2 ${tag.class}`}
+                                    class={`flex items-center gap-2 rounded-full text-sm py-1 px-2 mb-3 ${tag.class}`}
                                 >
                                     <tag.icon class="size-4" />
                                     {tag.name}

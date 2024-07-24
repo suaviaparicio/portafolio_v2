@@ -16,7 +16,7 @@ import Contact from "../components/Contact.astro";
 >
 	<main class="px-5">
 		<!-- Top -->
-		<SectionContainer id="top" class="py-96 pt-80 text-center">
+		<SectionContainer id="top" class="py-52 md:py-96 pt-80 text-center">
 			<h1
 				class="main-title text-5xl md:text-6xl flex justify-center flex-row pb-6"
 			>
@@ -54,7 +54,7 @@ import Contact from "../components/Contact.astro";
 		</SectionContainer>
 
 		<!-- Experiencia -->
-		<SectionContainer id="experiencia" class="mb-40">
+		<SectionContainer id="experiencia" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">Experiencia</h2>
 			<div class="flex justify-center gap-x-10">
 				<Experience />
@@ -70,15 +70,20 @@ import Contact from "../components/Contact.astro";
 				</span>
 			</button> -->
 
-			<button
-				class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]"
+			<a href="/lina_aparicio_2024es.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
 			>
-				Descargar CV
-			</button>
+				<button
+					class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]"
+				>
+					Descargar CV
+				</button>
+			</a>
 		</SectionContainer>
 
 		<!-- Proyectos -->
-		<SectionContainer id="proyectos" class="mb-40">
+		<SectionContainer id="proyectos" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">Proyectos</h2>
 			<div class="flex justify-center gap-x-10">
 				<Projects />
@@ -86,7 +91,7 @@ import Contact from "../components/Contact.astro";
 		</SectionContainer>
 
 		<!-- Skills -->
-		<SectionContainer id="skills" class="mb-40">
+		<SectionContainer id="skills" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">Skills Técnicos</h2>
 			<div class="flex  gap-x-10">
 				<Skills />
@@ -94,7 +99,7 @@ import Contact from "../components/Contact.astro";
 		</SectionContainer>
 
 		<!-- Contacto -->
-		<SectionContainer id="contacto" class="mb-40">
+		<SectionContainer id="contacto" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">Contacto</h2>
 			<div class="flex justify-center gap-x-10">
 				<Contact/>
