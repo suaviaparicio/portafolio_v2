@@ -19,8 +19,20 @@ const { title } = Astro.props;
 		<meta name="description" content="{description}" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/jpg" href="/lina.jpg">
+		<meta name ="robots" content ="index, follow">
 		<meta name="generator" content={Astro.generator} />
+		<meta name ="theme-color" content ="#a9d6e0">
+		
 		<title>Portafolio Lina Aparicio</title>
+
+		<!-- OPEN GRAPH -->
+		<meta name="description" content="{description}">
+
+		<meta property="og:title" content="Portafolio de Lina Aparicio, Desarrolladora web">
+		<meta property="og:description"
+			content="Hola, soy Lina Aparicio y quiero mostrarte mi portafolio donde encontrarás una selección de los proyectos que he realizado como Desarrolladora Web y en los que también he aplicado mi experiencia y habilidades como Project Manager">
+		<meta property="og:image" content="/lina.jpg"> 
+		<meta property="og:alt" content="Foto Lina Aparicio - Desarrolladora Web"> 
 
 	</head>
 	<body class="relative h-full w-full bg-white">
