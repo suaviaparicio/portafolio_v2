@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const ClipboardComponent = () => {
     useEffect(() => {
@@ -10,6 +10,7 @@ const ClipboardComponent = () => {
         const showSuccess = () => {
             defaultIcon.classList.add('hidden');
             successIcon.classList.remove('hidden');
+
 
             setTimeout(() => {
                 defaultIcon.classList.remove('hidden');
