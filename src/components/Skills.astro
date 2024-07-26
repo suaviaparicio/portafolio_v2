@@ -17,10 +17,11 @@ import TerminalIcon from "./icons/technologies/Terminal.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import AwsIcon from "./icons/technologies/Aws.astro";
 import DockerIcon from "./icons/technologies/Docker.astro";
+
 ---
 
-<div class="relative overflow-x-auto">
-    <table class="w-full text-md text-left rtl:text-right text-gray-500 dark:text-gray-400">
+<div id="skills-table-wrapper" class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-md text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
         <tbody>
             <tr class="bg-gray-50 dark:bg-gray-800">
                 <th scope="row" class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white" rowspan="2">
@@ -129,4 +130,11 @@ import DockerIcon from "./icons/technologies/Docker.astro";
         </tr>
         </tbody>
     </table>
+    <div id="gradient-overlay" class="block md:hidden gradient-overlay absolute top-0 right-0 h-full w-8 pointer-events-none bg-gradient-to-l from-white via-white"></div>
+    <div id="arrow-indicator" class="block md:hidden arrow-indicator absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none">
+        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </div>
+
 </div>
