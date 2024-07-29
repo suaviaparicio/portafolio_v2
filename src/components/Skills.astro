@@ -59,10 +59,6 @@ import DockerIcon from "./icons/technologies/Docker.astro";
                     <AstroIcon class="size-7 mb-1" />
                     Astro
                 </td>
-                <td class="px-6 py-4 text-sm">
-                    <AstroIcon class="size-7 mb-1" />
-                    Astro
-                </td>
             </tr>
             <tr
                 class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700"
@@ -142,29 +138,29 @@ import DockerIcon from "./icons/technologies/Docker.astro";
             </tr>
         </tbody>
     </table>
-        <div
-            id="gradientOverlay"
-            class="gradient-overlay absolute top-0 right-0 h-full w-8 pointer-events-none bg-gradient-to-l from-white via-white"
+    <div
+        id="gradientOverlay"
+        class="gradient-overlay absolute top-0 -right-2 h-full w-8 pointer-events-none bg-gradient-to-l from-white via-white"
+    >
+    </div>
+    <div
+        id="arrowIndicator"
+        class="arrow-indicator absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none"
+    >
+        <svg
+            class="w-6 h-6 text-gray-600 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
         >
-        </div>
-        <div
-            id="arrowIndicator"
-            class="arrow-indicator absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none"
-        >
-            <svg
-                class="w-6 h-6 text-gray-600 animate-bounce"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"></path>
-            </svg>
-        </div>
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
+        </svg>
+    </div>
 
 </div>
 
