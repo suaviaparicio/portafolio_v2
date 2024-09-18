@@ -12,6 +12,10 @@ import expressIcon from "./icons/technologies/Express.astro";
 import nodeIcon from "./icons/technologies/Node.astro";
 import GithubIcon from "./icons/GitHub.astro";
 import InternetIcon from "./icons/Internet.astro";
+import bootstrapIcon from "./icons/technologies/Bootstrap.astro";
+import mysqlIcon from "./icons/technologies/MySql.astro";
+import mongoIcon from "./icons/technologies/Mongo.astro";
+import figmaIcon from "./icons/technologies/Figma.astro";
 
 const TAGS = {
     HTML: {
@@ -71,61 +75,104 @@ const TAGS = {
         class: "bg-[#575757] text-white",
         icon: nodeIcon,
     },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "bg-[#575757] text-white",
+        icon: bootstrapIcon,
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-[#575757] text-white",
+        icon: mysqlIcon,
+    },
+    MONGO: {
+        name: "Mongo",
+        class: "bg-[#575757] text-white",
+        icon: mongoIcon,
+    },
+    FIGMA: {
+        name: "Figma",
+        class: "bg-[#575757] text-white",
+        icon: figmaIcon,
+    },
 };
 
 const PROJECTS = [
+
     {
-        title: "Sitio web 5inco Impro",
+        title: "Landing Page - Clan",
         description:
-            "Sitio web del grupo de improvisación teatral Cinco Impro.",
+            "SPA para una comunidad holística digital que incluye secciones informativas, botones a redes sociales, integración con Instagram y una encuesta para captación de datos.",
+        link: "https://www.clanholistico.com/",
+        // github: "https://github.com/suaviaparicio/clan-appt",
+        image: "/projects/proyecto_clan.webp",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DOCKER, TAGS.AWS, TAGS.FIGMA],
+    },
+
+    {
+        title: "Sitio web - 5inco Impro",
+        description:
+            "Sitio web del grupo de improvisación teatral Cinco con contenido informativo e integración con Instagram.",
         link: "https://cincoimpro.com/",
-        github: "https://github.com/suaviaparicio/5inco_React",
+        // github: "https://github.com/suaviaparicio/5inco_React",
         image: "/projects/proyecto_cinco3.webp",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.DOCKER, TAGS.AWS],
     },
+    {
+        title: "Bingo Game",
+        description:
+            "Bingo multi-jugador con inicio de sesión y validación automática para verificar si se cumple alguna de las formas válidas para ganar.",
+        github: "https://github.com/suaviaparicio/bingo-final",
+        image: "/projects/proyecto_bingo.webp",
+        tags: [TAGS.NODE, TAGS.EXPRESS, TAGS.MYSQL, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.DOCKER],
+    }
 ];
 ---
 
-<div class="flex flex-col gap-y-16 ">
+<div class="flex flex-col gap-y-16">
     {
         PROJECTS.map(({ title, description, link, github, image, tags }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-                <div>
+                <div class="">
                     <img
-                        class="rounded mb-2"
+                        class="rounded mb-0 md:mb-4"
                         src={image}
-                        alt="Proyecto Cinco Impro"
+                        alt="Proyecto"{title}
                     />
                 </div>
                 <div class="w-full md:w-1/2">
                     <h2 class="text-2xl font-semibold mb-2">{title}</h2>
                     <p class="text-xl mb-4 text-pretty">{description}</p>
-                    <a
-                        class="mr-6"
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <button class=" bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
-                            <span class="flex items-center gap-2">
-                                <InternetIcon class="size-4" />
-                                Sitio web
-                            </span>
-                        </button>
-                    </a>
-                    {/* <a
-                        class=""
-                        href={github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <button class=" bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
-                            <span class="flex items-center gap-2">
-                                <GithubIcon class="size-4" />
-                                Código
-                            </span>
-                        </button>
-                    </a> */}
+                    {link && (
+                        <a
+                            class="mr-6"
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button class=" bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
+                                <span class="flex items-center gap-2">
+                                    <InternetIcon class="size-4" />
+                                    Sitio web
+                                </span>
+                            </button>
+                        </a>
+                    )}
+                    {github && (
+                        <a
+                            class=""
+                            href={github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button class=" bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
+                                <span class="flex items-center gap-2">
+                                    <GithubIcon class="size-4" />
+                                    Código
+                                </span>
+                            </button>
+                        </a>
+                    )}
                     <ul class=" flex gap-x-2 flex-row mt-6 flex-wrap md:flex-nowrap">
                         {tags.map((tag) => (
                             <li>
