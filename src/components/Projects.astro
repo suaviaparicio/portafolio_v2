@@ -16,6 +16,9 @@ import bootstrapIcon from "./icons/technologies/Bootstrap.astro";
 import mysqlIcon from "./icons/technologies/MySql.astro";
 import mongoIcon from "./icons/technologies/Mongo.astro";
 import figmaIcon from "./icons/technologies/Figma.astro";
+import wordpressIcon from "./icons/technologies/Wordpress.astro";
+import shopifyIcon from "./icons/technologies/Shopify.astro";
+import gcpIcon from "./icons/technologies/Gcp.astro";
 
 const TAGS = {
     HTML: {
@@ -95,15 +98,60 @@ const TAGS = {
         class: "bg-[#575757] text-white",
         icon: figmaIcon,
     },
+    WORDPRESS: {
+        name: "Wordpress",
+        class: "bg-[#575757] text-white",
+        icon: wordpressIcon,
+    },
+    SHOPIFY: {
+        name: "Shopify",
+        class: "bg-[#575757] text-white",
+        icon: shopifyIcon,
+    },
+    GCP: {
+        name: "GCP",
+        class: "bg-[#575757] text-white",
+        icon: gcpIcon,
+    },
 };
 
 const PROJECTS = [
 
     {
+        title: "Sitio web - Infinity Trust",
+        description:
+            "Sitio estático con 6 secciones y un blog; además de accesible, responsivo y orientado a brindar información clara y confiable a los usuarios.",
+        link: "https://www.infinitytrust.eu/",
+        // github: "https://github.com/suaviaparicio/clan-appt",
+        image: "/projects/proyecto_infinity.webp",
+        tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.DOCKER, TAGS.GCP],
+    },
+
+    {
+        title: "Sitio web - Concrete Designs FL",
+        description:
+            "Rediseño moderno de la web con renovación de contenido, integración de modales HubSpot, nueva estructura y diseño responsivo multi-dispositivo.",
+        link: "https://concretedesignsfl.com/",
+        // github: "https://github.com/suaviaparicio/clan-appt",
+        image: "/projects/proyecto_concrete.webp",
+        tags: [TAGS.WORDPRESS],
+    },
+
+    // {
+    //     title: "Tienda virtual - Rominio",
+    //     description:
+    //         "E-commerce desarrollado en Shopify para productos capilares: catálogo atractivo, pagos seguros, experiencia de compra ágil y diseño responsivo.",
+    //     link: "https://clanholistico.netlify.app/",
+    //     // github: "https://github.com/suaviaparicio/clan-appt",
+    //     image: "/projects/proyecto_rominio.webp",
+    //     tags: [TAGS.SHOPIFY],
+    // },
+
+    {
         title: "Landing Page - Clan",
         description:
             "SPA para una comunidad holística digital que incluye secciones informativas, botones a redes sociales, integración con Instagram y una encuesta para captación de datos.",
-        link: "https://www.clanholistico.com/",
+        link: "https://clanholistico.netlify.app/",
         // github: "https://github.com/suaviaparicio/clan-appt",
         image: "/projects/proyecto_clan.webp",
         tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.DOCKER, TAGS.AWS, TAGS.FIGMA],
@@ -112,8 +160,8 @@ const PROJECTS = [
     {
         title: "Sitio web - 5inco Impro",
         description:
-            "Sitio web del grupo de improvisación teatral Cinco con contenido informativo e integración con Instagram.",
-        link: "https://677dc97842f88beeff13a2ef--coruscating-frangipane-cd01dc.netlify.app/",
+            "Sitio para grupo de improvisación teatral con información de shows, contacto, redes sociales y diseño responsivo.",
+        link: "https://cincoimpro.netlify.app/",
         // github: "https://github.com/suaviaparicio/5inco_React",
         image: "/projects/proyecto_cinco3.webp",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.DOCKER, TAGS.AWS],
@@ -122,32 +170,34 @@ const PROJECTS = [
     {
         title: "Sitio web - Génesis | Hogar de paso",
         description:
-            "Espacio desarrollado para promover la adopción de gatos del hogar, recibir donaciones y ofrecer productos para mascotas.",
+            "Web para hogar temporal de gatos: adopciones, donaciones y tienda para mascotas, con navegación clara y diseño responsivo.",
             // También cuenta con integración a Instagram.
-        link: "https://delicate-gecko-25b3a6.netlify.app/",
+        link: "https://genesishogardepaso.netlify.app/",
         // github: "https://github.com/suaviaparicio/5inco_React",
         image: "/projects/proyecto_genesis.webp",
         tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT, TAGS.DOCKER, TAGS.FIGMA],
     },
 
-    {
-        title: "Bingo Game",
-        description:
-            "Bingo multi-jugador con inicio de sesión y validación automática para verificar si se cumple alguna de las formas válidas para ganar.",
-        github: "https://github.com/suaviaparicio/bingo-final",
-        image: "/projects/proyecto_bingo.webp",
-        tags: [TAGS.NODE, TAGS.EXPRESS, TAGS.MYSQL, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.DOCKER],
-    }
+    // {
+    //     title: "Bingo Game",
+    //     description:
+    //         "Bingo multi-jugador con inicio de sesión y validación automática para verificar si se cumple alguna de las formas válidas para ganar.",
+    //     github: "https://github.com/suaviaparicio/bingo-final",
+    //     image: "/projects/proyecto_bingo.webp",
+    //     tags: [TAGS.NODE, TAGS.EXPRESS, TAGS.MYSQL, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.DOCKER],
+    // }
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
     {
-        PROJECTS.map(({ title, description, link, github, image, tags }) => (
+        // Línea para cuando vaya a mostrar código en Github (Quité el proyecto de Bingo)
+        // PROJECTS.map(({ title, description, link, github, image, tags }) => (
+        PROJECTS.map(({ title, description, link, image, tags }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-                <div class="">
+                <div class="w-full md:w-1/2 flex-shrink-0">
                     <img
-                        class="rounded mb-0 md:mb-4"
+                        class="w-full h-auto max-h-80 object-cover rounded mb-0 md:mb-4"
                         src={image}
                         alt="Proyecto"{title}
                     />
@@ -170,7 +220,7 @@ const PROJECTS = [
                             </button>
                         </a>
                     )}
-                    {github && (
+                    {/* {github && (
                         <a
                             class=""
                             href={github}
@@ -184,7 +234,7 @@ const PROJECTS = [
                                 </span>
                             </button>
                         </a>
-                    )}
+                    )} */}
                     <ul class=" flex gap-x-2 flex-row mt-6 flex-wrap md:flex-nowrap">
                         {tags.map((tag) => (
                             <li>
