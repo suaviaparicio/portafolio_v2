@@ -4,20 +4,22 @@ import WebIcon from "./icons/experience/Web.astro";
 import ProjectIcon from "./icons/experience/Project.astro";
 import EngineernIcon from "./icons/experience/Engineer.astro";
 
+const { translateLabels } = Astro.props;
+
 const EXPERIENCE = [
     {
-        title: "Desarrolladora Web",
-        description: "+2 años de experiencia en el desarrollo de aplicaciones web, centradas en la experiencia del usuario.",
+        title: translateLabels("home.experience.card1.title"),
+        description: translateLabels("home.experience.card1.description"),
         icon: WebIcon,
     },
     {
-        title: "Project Manager",
-        description: "+5 años liderando proyectos de expansión regional e innovación educativa con gestión eficiente de su ciclo de vida.",
+        title: translateLabels("home.experience.card2.title"),
+        description: translateLabels("home.experience.card2.description"),
         icon: ProjectIcon,
     },
     {
-        title: "Ing. de Diseño de Producto",
-        description: "Con énfasis en Gerencia de proyectos. Título obtenido en la universidad Eafit en el año 2015.",
+        title: translateLabels("home.experience.card3.title"),
+        description: translateLabels("home.experience.card3.description"),
         icon: EngineernIcon,
     },
 ]

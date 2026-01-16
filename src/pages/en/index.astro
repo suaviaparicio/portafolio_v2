@@ -1,18 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import LinkedinIcon from "../components/icons/Linkedin.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
-import Contact from "../components/Contact.astro";
+import Layout from "../../layouts/Layout.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import LinkedinIcon from "../../components/icons/Linkedin.astro";
+import GitHubIcon from "../../components/icons/GitHub.astro";
+import Experience from "../../components/Experience.astro";
+import Projects from "../../components/Projects.astro";
+import Skills from "../../components/Skills.astro";
+import Contact from "../../components/Contact.astro";
 
-import { useTranslations } from "../i18n/utils";
-import { languageList } from "../i18n/ui";
+import { useTranslations } from "../../i18n/utils";
+import { languageList } from "../../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const translateLabels = useTranslations( currentLang as keyof typeof languageList );
+
 ---
 
 <Layout
@@ -86,7 +87,7 @@ const translateLabels = useTranslations( currentLang as keyof typeof languageLis
 		<SectionContainer id="proyectos" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">{translateLabels("home.projects")}</h2>
 			<div class="flex justify-center gap-x-10">
-				<Projects translateLabels={translateLabels}/>
+				<Projects translateLabels={translateLabels} />
 			</div>
 		</SectionContainer>
 

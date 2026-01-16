@@ -20,6 +20,8 @@ import wordpressIcon from "./icons/technologies/Wordpress.astro";
 import shopifyIcon from "./icons/technologies/Shopify.astro";
 import gcpIcon from "./icons/technologies/Gcp.astro";
 
+const { translateLabels } = Astro.props;
+
 const TAGS = {
     HTML: {
         name: "HTML",
@@ -116,21 +118,18 @@ const TAGS = {
 };
 
 const PROJECTS = [
-
     {
-        title: "Sitio web - Infinity Trust",
-        description:
-            "Sitio estático con 6 secciones y un blog; además de accesible, responsivo y orientado a brindar información clara y confiable a los usuarios.",
+        title: translateLabels("home.projects.project1.title"),
+        description: translateLabels("home.projects.project1.description"),
         link: "https://www.infinitytrust.eu/",
         // github: "https://github.com/suaviaparicio/clan-appt",
         image: "/projects/proyecto_infinity.webp",
-        tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.DOCKER, TAGS.GCP],
+        tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.GCP],
     },
 
     {
-        title: "Sitio web - Concrete Designs FL",
-        description:
-            "Rediseño moderno de la web con renovación de contenido, integración de modales HubSpot, nueva estructura y diseño responsivo multi-dispositivo.",
+        title: translateLabels("home.projects.project2.title"),
+        description: translateLabels("home.projects.project2.description"),
         link: "https://concretedesignsfl.com/",
         // github: "https://github.com/suaviaparicio/clan-appt",
         image: "/projects/proyecto_concrete.webp",
@@ -138,19 +137,17 @@ const PROJECTS = [
     },
 
     // {
-    //     title: "Tienda virtual - Rominio",
-    //     description:
-    //         "E-commerce desarrollado en Shopify para productos capilares: catálogo atractivo, pagos seguros, experiencia de compra ágil y diseño responsivo.",
-    //     link: "https://clanholistico.netlify.app/",
+    //     title: translateLabels("home.projects.project3.title"),
+    //     description: translateLabels("home.projects.project3.description"),
+    //     link: "https://rominio.co/",
     //     // github: "https://github.com/suaviaparicio/clan-appt",
     //     image: "/projects/proyecto_rominio.webp",
     //     tags: [TAGS.SHOPIFY],
     // },
 
     {
-        title: "Landing Page - Clan",
-        description:
-            "SPA para una comunidad holística digital que incluye secciones informativas, botones a redes sociales, integración con Instagram y una encuesta para captación de datos.",
+        title: translateLabels("home.projects.project4.title"),
+        description: translateLabels("home.projects.project4.description"),
         link: "https://clanholistico.netlify.app/",
         // github: "https://github.com/suaviaparicio/clan-appt",
         image: "/projects/proyecto_clan.webp",
@@ -158,9 +155,8 @@ const PROJECTS = [
     },
 
     {
-        title: "Sitio web - 5inco Impro",
-        description:
-            "Sitio para grupo de improvisación teatral con información de shows, contacto, redes sociales y diseño responsivo.",
+        title: translateLabels("home.projects.project5.title"),
+        description: translateLabels("home.projects.project5.description"),
         link: "https://cincoimpro.netlify.app/",
         // github: "https://github.com/suaviaparicio/5inco_React",
         image: "/projects/proyecto_cinco3.webp",
@@ -168,9 +164,8 @@ const PROJECTS = [
     },
     
     {
-        title: "Sitio web - Génesis | Hogar de paso",
-        description:
-            "Web para hogar temporal de gatos: adopciones, donaciones y tienda para mascotas, con navegación clara y diseño responsivo.",
+        title: translateLabels("home.projects.project6.title"),
+        description: translateLabels("home.projects.project6.description"),
             // También cuenta con integración a Instagram.
         link: "https://genesishogardepaso.netlify.app/",
         // github: "https://github.com/suaviaparicio/5inco_React",
@@ -215,7 +210,7 @@ const PROJECTS = [
                             <button class=" bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 hover:bg-white active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
                                 <span class="flex items-center gap-2">
                                     <InternetIcon class="size-4" />
-                                    Sitio web
+                                    {translateLabels("home.projects.button")}
                                 </span>
                             </button>
                         </a>
