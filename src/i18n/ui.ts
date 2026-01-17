@@ -9,7 +9,7 @@ export const labels = {
         "home.description": "Desarrolladora web frontend con experiencia en Astro, React y Tailwind. Proyectos con diseño responsivo, UX y gestión ágil de proyectos.",
         "home.profile" : "Desarrolladora Web | Project Manager | Ingeniera de Diseño de Producto",
         
-
+        // Experiencia
         "home.experience" : "Experiencia",
         "home.experience.card1.title" : "Desarrolladora Web",
         "home.experience.card1.description" : "+2 años de experiencia en el desarrollo de aplicaciones web, centradas en la experiencia del usuario.",
@@ -23,7 +23,7 @@ export const labels = {
         "home.experience.button.cves" : "CV - Español",
         "home.experience.button.cven" : "CV - Inglés",
 
-        
+        // Proyectos
         "home.projects" : "Proyectos de Desarrollo Web",
         "home.projects.button" : "Sitio web",
         "home.projects.project1.title" : "Sitio web - Infinity Trust",
@@ -44,9 +44,14 @@ export const labels = {
         "home.projects.project6.title" : "Sitio web - Génesis | Hogar de paso",
         "home.projects.project6.description" : "Web para hogar temporal de gatos: adopciones, donaciones y tienda para mascotas, con navegación clara y diseño responsivo. ",
 
-
+        // Habilidades Técnicas
         "home.technicalskills" : "Habilidades Tecnicas",
+        "home.technicalskills.tools" : "Herramientas",
+
+        // Contacto
         "home.contact" : "Contacto",
+        "home.contact.copyButton" : "Copiar",
+        "home.contact.copied" : "Copiado",
 
     },
     en: {
@@ -54,6 +59,7 @@ export const labels = {
         "home.description": "Frontend web developer experienced in Astro, React, and Tailwind. Projects focused on UX, responsive design, and agile management.",
         "home.profile" : "Web Developer | Project Manager | Product Design Engineer",
         
+        // Experience
         "home.experience" : "Experience",
         "home.experience.card1.title" : "Web Developer",
         "home.experience.card1.description" : "+2 years of experience in web application development, focused on user experience.",
@@ -67,7 +73,7 @@ export const labels = {
         "home.experience.button.cves" : "CV - Spanish",
         "home.experience.button.cven" : "CV - English",
         
-
+        // Projects
         "home.projects" : "Web Development Projects",
         "home.projects.button" : "Website",
         "home.projects.project1.title" : "Infinity Trust website",
@@ -88,10 +94,13 @@ export const labels = {
         "home.projects.project6.title" : "Génesis | Foster house website",
         "home.projects.project6.description" : "Website for a temporary cat shelter: adoptions, donations, and a pet shop, with clear navigation and responsive design.",
 
-
-
-
+        // Technical Skills
         "home.technicalskills" : "Technical Skills",
+        "home.technicalskills.tools" : "Tools",
+
+        // Contact
         "home.contact" : "Contact",
+        "home.contact.copyButton" : "Copy",
+        "home.contact.copied" : "Copied",
     }
 }

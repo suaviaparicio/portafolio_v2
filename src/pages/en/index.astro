@@ -95,7 +95,7 @@ const translateLabels = useTranslations( currentLang as keyof typeof languageLis
 		<SectionContainer id="skills" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">{translateLabels("home.technicalskills")}</h2>
 			<div class="flex  gap-x-10">
-				<Skills/>
+				<Skills translateLabels={translateLabels}/>
 			</div>
 		</SectionContainer>
 
@@ -103,7 +103,7 @@ const translateLabels = useTranslations( currentLang as keyof typeof languageLis
 		<SectionContainer id="contacto" class="mb-32 md:mb-40 scroll-mt-80 md:scroll-mt-24">
 			<h2 class="title text-4xl font-semibold mb-10">{translateLabels("home.contact")}</h2>
 			<div class="flex justify-center gap-x-10">
-				<Contact/>
+				<Contact translateLabels={translateLabels}/>
 			</div>
 		</SectionContainer>
 		
