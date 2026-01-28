@@ -1,3 +1,7 @@
+---
+const { translateLabels } = Astro.props;
+---
+
 <footer class="bg-white dark:bg-gray-900">
     <div class=" mx-auto w-full max-w-screen-xl px-5 py-3 mt-10">
         <div class="px-4 py-6 bg-gray-200 dark:bg-gray-700 md:flex md:items-center md:justify-between">
@@ -8,16 +12,16 @@
                         <a href="#top" class="hover:underline me-4 md:me-6">Home</a>
                     </li>
                     <li>
-                        <a href="#experiencia" class="hover:underline me-4 md:me-6">Experiencia</a>
+                        <a href="#experiencia" class="hover:underline me-4 md:me-6">{translateLabels("home.footer.experience")}</a>
                     </li>
                     <li>
-                        <a href="#proyectos" class="hover:underline me-4 md:me-6">Proyectos</a>
+                        <a href="#proyectos" class="hover:underline me-4 md:me-6">{translateLabels("home.footer.projects")}</a>
                     </li>
                     <li>
-                        <a href="#skills" class="hover:underline me-4 md:me-6">Skills</a>
+                        <a href="#skills" class="hover:underline me-4 md:me-6">{translateLabels("home.footer.skills")}</a>
                     </li>
                     <li>
-                        <a href="#contacto" class="hover:underline">Contacto</a>
+                        <a href="#contacto" class="hover:underline">{translateLabels("home.footer.contact")}</a>
                     </li>
                 </ul>
 

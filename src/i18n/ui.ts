@@ -53,6 +53,12 @@ export const labels = {
         "home.contact.copyButton" : "Copiar",
         "home.contact.copied" : "Copiado",
 
+        // Footer
+        "home.footer.experience" : "Experiencia",
+        "home.footer.projects" : "Proyectos",
+        "home.footer.skills" : "Habilidades",
+        "home.footer.contact" : "Contacto",
+
     },
     en: {
         "home.title": "Lina Aparicio | Web Developer & Project Manager",
@@ -102,5 +108,11 @@ export const labels = {
         "home.contact" : "Contact",
         "home.contact.copyButton" : "Copy",
         "home.contact.copied" : "Copied",
+
+        // Footer
+        "home.footer.experience" : "Experience",
+        "home.footer.projects" : "Projects",
+        "home.footer.skills" : "Skills",
+        "home.footer.contact" : "Contact",
     }
 }
