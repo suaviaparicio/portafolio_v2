@@ -8,7 +8,9 @@ import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.astro";
 
 const currentLang = Astro.currentLocale || "es";
-const translateLabels = useTranslations( currentLang as keyof typeof languageList );
+const translateLabels = useTranslations(
+	currentLang as keyof typeof languageList,
+);
 
 interface Props {
 	title: string;
@@ -24,29 +26,48 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="{description}" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/jpg" href="/lina_favicon.webp">
-		<meta name ="robots" content ="index, follow">
+		<link rel="icon" type="image/jpg" href="/lina_favicon.webp" />
+		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name ="theme-color" content ="#a9d6e0">
-		
-		<title>{ title }</title>
+		<meta name="theme-color" content="#a9d6e0" />
+
+		<title>{title}</title>
 
 		<!-- OPEN GRAPH -->
-		<meta name="description" content="{description}">
+		<meta name="description" content="{description}" />
 
-		<meta property="og:title" content="Lina Aparicio - Desarrolladora Web | Portafolio">
-		<meta property="og:description"
-			content="Proyectos que he realizado como Desarrolladora Web, aplicando también mi experiencia y habilidades como Project Manager">
-		<meta property="og:image" content="/lina_link.webp"> 
-		<meta property="og:alt" content="Foto Lina Aparicio - Desarrolladora Web"> 
-
+		<meta
+			property="og:title"
+			content="Lina Aparicio - Desarrolladora Web | Portafolio"
+		/>
+		<meta
+			property="og:description"
+			content="Proyectos que he realizado como Desarrolladora Web, aplicando también mi experiencia y habilidades como Project Manager"
+		/>
+		<meta property="og:image" content="/lina_link.webp" />
+		<meta
+			property="og:alt"
+			content="Foto Lina Aparicio - Desarrolladora Web"
+		/>
 	</head>
 	<body class="relative h-full w-full bg-white">
 		<!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div> -->
-		<div class="absolute inset-0 z-[-1] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+		<div
+			class="absolute inset-0 z-[-1] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+		>
+		</div>
 		<Header client:load currentLang={currentLang} />
 			<slot />
-		<Footer translateLabels={translateLabels}/>
+		<Footer translateLabels={translateLabels} />
+
+		<!-- Restaura el scroll cuando la página carga -->
+		<script is:inline>
+			const savedScroll = sessionStorage.getItem("scrollY");
+			if (savedScroll) {
+				window.scrollTo(0, Number(savedScroll));
+				sessionStorage.removeItem("scrollY");
+			}
+		</script>
 	</body>
 </html>
 <style is:global>
@@ -72,7 +93,6 @@ const { title } = Astro.props;
 		}
 	}
 
-
 	.main-title {
 		font-family: "Kalnia Variable", system-ui, sans-serif;
 	}
@@ -85,5 +105,3 @@ const { title } = Astro.props;
 		color: #575757;
 	}
 </style>
-
-

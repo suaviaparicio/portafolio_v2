@@ -50,22 +50,29 @@ const Header = ({ currentLang }) => {
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
+                                onClick={() => {
+                                    sessionStorage.setItem("scrollY", window.scrollY.toString());
+                                }}
                                 className="hover:underline"
                             >
                                 {item.label}
                             </a>
+
                         ))}
 
                         {/* Botón de cambio de idioma */}
                         <a
                             href={switchHref}
                             data-astro-prefetch
+                            onClick={() => {
+                                sessionStorage.setItem("scrollY", window.scrollY.toString());
+                            }}
                             className="border border-gray-400 rounded-md px-3 py-1 text-sm hover:scale-105 transition"
-                            aria-label={`Cambiar a ${targetLang === "en" ? "inglés" : "español"
-                                }`}
+                            aria-label={`Cambiar a ${targetLang === "en" ? "inglés" : "español"}`}
                         >
                             {targetLang.toUpperCase()}
                         </a>
+
                     </nav>
                 </div>
             </div>
