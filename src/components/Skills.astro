@@ -22,6 +22,8 @@ import ShopifyIcon from "./icons/technologies/Shopify.astro";
 import GcpIcon from "./icons/technologies/Gcp.astro";
 import Wordpress from "./icons/technologies/Wordpress.astro";
 import Shopify from "./icons/technologies/Shopify.astro";
+
+const { translateLabels } = Astro.props;
 ---
 
 <div
@@ -64,6 +66,7 @@ import Shopify from "./icons/technologies/Shopify.astro";
                     <NextIcon class="size-7 mb-1" />
                     Next.Js
                 </td>
+                <td class="px-6 py-4 text-sm"> </td>
             </tr>
             <tr
                 class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700"
@@ -88,6 +91,7 @@ import Shopify from "./icons/technologies/Shopify.astro";
                     <FigmaIcon class="size-7 mb-1" />
                     Figma
                 </td>
+                <td class="px-6 py-4 text-sm"> </td>
                 <td class="px-6 py-4 text-sm"> </td>
             </tr>
             <tr
@@ -117,13 +121,14 @@ import Shopify from "./icons/technologies/Shopify.astro";
                 </td>
                 <td class="px-6 py-4 text-sm"> </td>
                 <td class="px-6 py-4 text-sm"> </td>
+                <td class="px-6 py-4 text-sm"> </td>
             </tr>
             <tr class="bg-gray-50 dark:bg-gray-800">
                 <th
                     scope="row"
                     class="px-6 py-4 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                    Herramientas
+                    {translateLabels("home.technicalskills.tools")}
                 </th>
                 <td class="px-6 py-4 text-sm">
                     <VsCodeIcon class="size-7 mb-1" />

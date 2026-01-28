@@ -2,6 +2,8 @@
 import ClipboardComponent from "./ClipboardComponent.jsx";
 import CopyIcon from "./icons/Copy.astro";
 import CheckIcon from "./icons/Check.astro";
+
+const { translateLabels } = Astro.props;
 ---
 
 <div class="w-full max-w-[16rem]">
@@ -12,11 +14,11 @@ import CheckIcon from "./icons/Check.astro";
         <button id="copy-button" data-copy-to-clipboard-target="copy-email" class="bg-[#A9D6E0] border-2 border-[#575757] rounded-[10px] shadow-[4px_4px_0_0_#575757] text-black cursor-pointer inline-block text-md px-4 leading-[30px] text-center select-none duration-300 active:shadow-[2px_2px_0_0_#575757] active:translate-x-[2px] active:translate-y-[2px]">
             <span id="default-icon-contact-details" class="inline-flex items-center">
                 <CopyIcon/>
-                <span class="text-md ">Copiar</span>
+                <span class="text-md ">{translateLabels("home.contact.copyButton")}</span>
             </span>
             <span id="success-icon-contact-details" class="hidden inline-flex items-center">
                 <CheckIcon/>
-                <span class="text-md  text-gray-600 dark:text-white">Copiado</span>   
+                <span class="text-md  text-gray-600 dark:text-white">{translateLabels("home.contact.copied")}</span>
             </span>
         </button>
     </div>
