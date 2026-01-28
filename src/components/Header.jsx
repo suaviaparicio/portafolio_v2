@@ -50,6 +50,7 @@ const Header = ({ currentLang }) => {
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
+                                data-astro-prefetch
                                 onClick={() => {
                                     sessionStorage.setItem("scrollY", window.scrollY.toString());
                                 }}
